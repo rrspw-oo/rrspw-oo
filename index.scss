@@ -1,114 +1,109 @@
 :root {
-    --background: #282A35;
-    --text: #000;
-    --highlight: #88E767;
-    --h1-color:#000;
-    --p-color:#000;
-    --kaisei-font: 'Kaisei Decol', sans-serif;
-    --poppins-font:'Poppins', sans-serif;;
-  }
+  --background: #282a35;
+  --text: #000;
+  --highlight: #88e767;
+  --h1-color: #000;
+  --p-color: #000;
+  --kaisei-font: "Kaisei Decol", sans-serif;
+  --poppins-font: "Poppins", sans-serif;
+}
 
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
-  body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-  
+body {
+  background: white;
+  transition: 0.5s background ease;
 
-  * {
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-  }
- 
-  body {
-    background: white;
-    transition: 0.5s background ease;
-    
- //home
-   
+  //home
+}
+
+main {
+  section.main-part {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      text-align: center;
+      padding: 1rem;
     }
-
-    main {
-      section.main-part{
-        padding:1rem;
+    nav {
+      position: relative;
+      transform: translateX(170%);
+      top: 7rem;
+      display: flex;
+      flex-direction: column;
+      a {
+        position: relative;
+        text-decoration: none;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-            h1{
-                text-align: center;
-                padding: 1rem;
-            }
-            nav {
-                position: relative;
-                transform: translateX(170%);
-                top:7rem;
-                display: flex;
-                flex-direction: column;
-                a{
-                  position: relative;
-                  text-decoration: none;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  padding: 1px;
-                  color: var(--text);
-                  font-family: var(--kaisei-font);
-                  font-size: 16px;
-                  font-weight: 700;
-                  text-transform: lowercase;
-                &:before {
-                  position: absolute; //positioning of the :before
-                  bottom: -3px;
-                  content:" ";
-                  width: 100%;
-                  height: 3px;
-                  background-color: var(--highlight);
-                  transform: translateX(-15%); //initial distance from left
-                  opacity: 0;
-                }
-                &:hover{
-                    &:before {
-                    opacity: 1;
-                    transition: 0.5s transform ease, 0.8s opacity ease;
-                    transform: translateX(0);
-                  }
-                }
-              }
-            }
-            .active {
-                color: var(--highlight);
-                font-weight: 700;
-            
-                &:hover {
-                  &:before {
-                    opacity: 0;
-                  }
-                }
-              }
-            img {
-                display: flex;
-                width:100%;
-            }
-            div.homep{
-                position: absolute;
-                top:45%;
-            }
-            p{
-                text-align: center;
-                font-family: var(--poppins-font);
-                font-weight: 200;
-            }
-
+        padding: 1px;
+        color: var(--text);
+        font-family: var(--kaisei-font);
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: lowercase;
+        &:before {
+          position: absolute; //positioning of the :before
+          bottom: -3px;
+          content: " ";
+          width: 100%;
+          height: 3px;
+          background-color: var(--highlight);
+          transform: translateX(-15%); //initial distance from left
+          opacity: 0;
         }
- //mode switch
-        //outsidecircle
+        &:hover {
+          &:before {
+            opacity: 1;
+            transition: 0.5s transform ease, 0.8s opacity ease;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+    .active {
+      color: var(--highlight);
+      font-weight: 700;
+
+      &:hover {
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+    img {
+      display: flex;
+      width: 100%;
+    }
+    div.homep {
+      position: absolute;
+      top: 45%;
+    }
+    p {
+      text-align: center;
+      font-family: var(--poppins-font);
+      font-weight: 200;
+    }
+  }
+  //mode switch
+  //outsidecircle
   .theme-switch {
     display: flex;
     position: absolute;
-    --background: #FFF;
+    --background: #fff;
     --text: #000;
     color: var(--text);
     width: 30px;
@@ -116,129 +111,103 @@
     background: var(--highlight);
     border-radius: 50px;
     transform: translateX(-400%);
-    top:11.5rem;
-
-
-
+    top: 11.5rem;
+  }
+  //innercircle
+  .switch {
+    background: white;
+    width: 24px;
+    height: 24px;
+    background: var(--background);
+    border-radius: 100%;
+    position: absolute;
+    top: 4.5px;
+    left: 3px;
+    transition: 0.5s all ease;
+  }
 }
-         //innercircle
-    .switch {
-      background: white;
-      width: 24px;
-      height: 24px;
-      background: var(--background);
-      border-radius: 100%;
-      position: absolute;
-      top: 4.5px;
-      left: 3px;
-      transition: 0.5s all ease;
-    }
-  
-      
-    }
-   
 
 //  theme switches
 .light-theme {
   background: var(--background);
-  --text: #F0F2FF;
-
-
+  --text: #f0f2ff;
 
   .theme-switch {
     --background: #fff;
-
-
 
     .switch {
       transform: translateY(37px);
     }
   }
-  
-  
 }
 .light-theme .navigation a.active {
-  color: #77CB5A;
+  color: #77cb5a;
 }
 
 .light-theme h1 {
-  color: #F0F2FF;
-
+  color: #f0f2ff;
 }
 
 .light-theme .homep {
-  color: #F0F2FF;
-
+  color: #f0f2ff;
 }
-
 
 .light-theme .pp {
-  color: #F0F2FF;
+  color: #f0f2ff;
   font-weight: 200;
   font-family: var(--poppins-font);
-
 }
 
 .light-theme h2 {
-  color:#282A35;
+  color: #282a35;
 }
 
 .light-theme h2 {
-  color:#F0F2FF;
+  color: #f0f2ff;
 }
 
-
-
-.light-theme .background{
-  border:1px solid #F0F2FF;
+.light-theme .background {
+  border: 1px solid #f0f2ff;
 }
 
-.light-theme .creSpa{
-  border:1px solid #F0F2FF;
+.light-theme .creSpa {
+  border: 1px solid #f0f2ff;
 }
 
-
-.light-theme .avoca{
-  border:1px solid #F0F2FF;
+.light-theme .avoca {
+  border: 1px solid #f0f2ff;
 }
-
-  
-
-
-   
 
 //-----------------------------------------------------//
 //aboutme
 
-      .resumebtn{
-        position:absolute;
-        top:34.7%;
-        color:white;
-        border-radius: 10px;
-        font-family: var(--poppins-font);
-        font-weight: 300;
-        font-style: italic;
-        font-size: 12px;
-        transform: translateX(-46%);
-        text-decoration: none;
-        cursor: pointer;
-        &:before {
-          background: none;
-        }
-    }
+.resumebtn {
+  position: absolute;
+  top: 34.7%;
+  color: white;
+  border-radius: 10px;
+  font-family: var(--poppins-font);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 12px;
+  transform: translateX(-46%);
+  text-decoration: none;
+  cursor: pointer;
+  &:before {
+    background: none;
+  }
+}
 
-     
 //CARD STYLES
-h2, .pp{
+h2,
+.pp {
   font-family: var(--poppins-font);
   text-align: left;
-
 }
 
-.pp{
+.pp {
   font-size: 14px;
 }
-
 
 section.cardS {
   margin: 1rem;
@@ -253,7 +222,9 @@ section.cardS {
     flex-direction: column;
   }
 }
-.background, .creSpa, .avoca {
+.background,
+.creSpa,
+.avoca {
   border-radius: 6px;
   border: 1px solid black;
   max-height: 100px;
@@ -265,21 +236,29 @@ section.cardS {
   position: relative;
 }
 
-.background:hover, .creSpa:hover, .avoca:hover {
+.background:hover,
+.creSpa:hover,
+.avoca:hover {
   cursor: pointer;
   max-height: 400px;
 }
 
-.details, .details2, .details3, .readmore, .readmore2, .readmore3 {
+.details,
+.details2,
+.details3,
+.readmore,
+.readmore2,
+.readmore3 {
   font-weight: 300;
 }
 
 @media (max-width: 1108px) {
-  .background, .creSpa, .avoca {
+  .background,
+  .creSpa,
+  .avoca {
     width: 100%;
     margin: 0 0 1rem 0;
   }
 }
- 
 
 //projects
