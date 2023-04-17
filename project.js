@@ -19,6 +19,10 @@ btns.onclick = function () {
   openModal(modals);
 };
 
+probtn.onclick = function () {
+  openModal(proModal);
+};
+
 // When the user clicks on <span> (x), close the modal
 var closeBtns = document.querySelectorAll(".close");
 closeBtns.forEach(function (closeBtn) {
