@@ -2,55 +2,212 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&family=Poppins:ital,wght@0,200;0,300;0,400;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./index.css" />
-    <title>WU ROU WEI</title>
-    <link rel="icon" href="./wufavicon.ico" />
+    <title>WUROUWEI-REN</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./component/metAvatar.png" />
   </head>
   <body>
-    <!--navs-->
-    <main>
-      <section class="main-part">
-        <h1>Wuuuuuuu</h1>
-        <nav>
-          <a href="#" class="active" target="_blank">Home</a>
-          <a href="./aboutme.html" target="_self">About</a>
-          <a href="./project.html" target="_self">Projects</a>
-        </nav>
+    <section class="settings">
+      <div class="trail"></div>
+      <aside>
+        <div id="Title">
+          <div class="Title-title"></div>
+          <button id="themeSwitchBtn" onclick="toggleButton()"></button>
+        </div>
+        <p>Ren is a strategic <code>problem-solver</code></p>
+        <p>
+          she adept at orchestrating teams and crafting innovative solutions. With comprehensive knowledge and extensive experience in the software development life cycle, she excels at navigating complex challenges.
+        </p>
+      </aside>
+      <aside class="experience_sec">
+        <p class="experience_title">selectedWork_01</p>
+        <ul>
+          <li data-content="li-1">Equipment lending and 
+            Conference Room Booking System </li>
+          <li data-content="li-2">Business Middle Ware System</li>
+          <li data-content="li-3">Procurement Inquiry Platform _RPA</li>
+        </ul>
+      </aside>
+      <!-- <div class="divider"></div> -->
 
-        <div class="img">
-          <img src="./icons/suncon.svg" alt="lightfigure" />
-          <img src="./icons/mooncon.svg" alt="darkfigure" id="darkfigure" />
-        </div>
+      <p class="secP">
+        Additionally, she possesses acknowledged expertise and hands-on experience in user interface design.
+      </p>
+      <aside class="experience_sec">
+        <p class="experience_title">selectedWork_02</p>
+        <ul>
+          <li>coming</li>
+          <li>soon</li>
+          <li>🤞🏾</li>
+        </ul>
+      </aside>
+      <p class="secP">Furthermore, her enthusiasm for coding fuels her dedication and drives her commitment to excellence.</p>
+    </section>
 
-        <!--modeswitch-->
-        <div class="theme-switch">
-          <!--innercircle-->
-          <div class="switch"></div>
+    <!--main content-->
+    <main class="main-content">
+
+    <!--li1-->
+      <div id="li-1" class="hidden">
+          <div class="rpacover">
+            <img
+              src="./faconSystem/FCsystem.png"
+              alt="cover"
+              class="scroll-transition-fade"
+              style="
+                width: 900px;
+                height: 5700px;
+                transition-duration: initial;
+              "
+            />
+      </div>
+      </div>
+
+  <!--li1-->
+<!--li-3-->
+      <div id="li-3" class="hidden">
+        <div class="rpacover">
+          <img
+            src="./rpa/rpaCover.png"
+            alt="cover"
+            class="scroll-transition-fade"
+            style="
+              width: 900px;
+              height: 450px;
+              transition-duration: initial;
+            "
+          />
         </div>
-        <div class="homep">
-          <p>
-            Hi there👋🏽 <br />My name is <b> Wu Rou Wei</b> and goes by Ren.<br />
-            Someone who discovered her passion for front-end<br />while working as
-            a UI designer and project manager.
-          </p>
-          <br />
-          <p>
-            Take a look at some of my recent projects <br />and see how my
-            curiosity and passion for softwate-development<br />have brought me to where I am
-            today.
-          </p>
+        <div class="rpaoverview">
+          <img
+            src="./rpa/rpaOverview.png"
+            alt="cover"
+            class="scroll-transition-fade"
+            style="
+              width: 900px;
+              height: 850px;
+              transition-duration: initial;
+            "
+          />
+        </div> 
+        <div class="rparole">
+          <img
+            src="./rpa/rpaRole.png"
+            alt="cover"
+            class="scroll-transition-fade"
+            style="
+              width: 900px;
+              height: 230px;
+              transition-duration: initial;
+            "
+          />
+        </div> 
+        <div class="rpaflow">
+          <img
+            src="./rpa/rpaFlows.png"
+            alt="cover"
+            class="scroll-transition-fade"
+            style="
+              width: 900px;
+              height: 830px;
+              transition-duration: initial;
+            "
+          />
+        </div> 
+        <div class="rpafooter">
+          <img
+            src="./rpa/rpaFooter.png"
+            alt="cover"
+            class="scroll-transition-fade"
+            style="
+              width: 900px;
+              height: 100px;
+              transition-duration: initial;
+            "
+          />
+        </div> 
+      </div>
+
+
+
+
+<!--li-2-->
+      <div id="li-2" class="hidden">
+        <div class="li-2-container">
+          <div class="li-2-intro">
+            <div class="cover">
+              <img
+                src="./component/cover.png"
+                alt="cover"
+                class="scroll-transition-fade"
+                style="
+                  width: 900px;
+                  height: 550px;
+                  transition-duration: initial;
+                "
+              />
+            </div>
+            <div class="projectOverview">
+              <img src="./component/projectOverview.png" alt="projectOverview"
+              style="
+                  width: 900px;
+                  height: 650px;
+                  transition-duration: initial;
+                ">
+            </div>
+            <div class="projectPhrases">
+              <img src="./component/projectPhrases.png" alt="projectPhrases"
+              style="
+                  width: 900px;
+                  height: 550px;
+                  transition-duration: initial;
+                ">
+            </div>
+            <div class="modual">
+              <img
+                src="./component/modularizedMenus.png"
+                alt="modularizedMenus"
+                class="modualPic scroll-transition-fade"
+                style="
+                  width: 900px;
+                  height: 355px;
+                  transition-duration: initial;
+                "
+              />
+            </div>
+            <div class="versionControl">
+              <img src="./component/versionControl.png" alt="versionControl"
+              style="
+                  width: 900px;
+                  height: 650px;
+                  transition-duration: initial;
+                ">
+            </div>
+          <div class="prototyping">
+            <img
+              src="./component/prototyping.png"
+              alt="prototyping"
+              class="modualPic scroll-transition-fade"
+              style="
+                width: 900px;
+                height: 955px;
+                transition-duration: initial;
+              "
+            />
+          </div>
+          <div class="modual-guideline">
+            <img
+              src="./component/guideline.png"
+              alt="guideline"
+              class="scroll-transition-fade"
+              style="width: 900px; height: 1500px"
+            />
+          </div>
+
         </div>
-      </section>
+      </div>
     </main>
-
-    <script src="./myweb.js"></script>
   </body>
+  <script src="./script.js"></script>
 </html>

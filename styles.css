@@ -1,0 +1,312 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+  --background-color: #eee;
+  --text-color: black;
+  --border-color: #222;
+  --hovering-color:black;
+  --font-family: 'Inconsolata',sans-serif;
+  --font-size: 12px;
+  --font-weight:400;
+}
+
+/* Define the styles for the light theme */
+.firstTheme {
+  --background-color: #eee;
+  --text-color: black;
+  --border-color: black;
+  --hovering-color:black;
+  --font-family: 'Inconsolata',sans-serif;
+  --font-size: 12px;
+  --font-weight:400;
+}
+
+/* Define the styles for the dark theme */
+.secondTheme {
+  --background-color:#cfecef;
+  --text-color: #ff6200;
+  --border-color: #ff6200;
+  --hovering-color: #adff2f;
+  --font-family: 'Inconsolata',sans-serif;
+  --font-size:12px;
+  --font-weight:400;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  font-size: var(--font-size);
+  font-weight: var( --font-weight);
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    margin: 2rem 0 0rem 0;
+    width: auto;
+    padding: 0 20px;
+  }
+}
+.trail {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  cursor: cell;
+}
+
+
+.settings {
+  position: absolute;
+  padding: 3.8rem 2rem 0;
+  inset: 0;
+  overflow-y: auto;
+  box-sizing: border-box;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  width: 300px;
+}
+
+p {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+main {
+  justify-content: baseline;
+  display: flex;
+  margin: 2rem 0 0rem 27rem;
+  width: 900px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.hidden {
+  display: none;
+}
+
+code {
+  font-family: monospace;
+  background:greenyellow;
+  color: var(--light);
+  padding: 0 0.75ex 0.2ex;
+}
+
+
+.experience_title{
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 10px 0 0px 0;
+}
+
+.secP{
+  border: 0.5px dashed  var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 33px 0 33px 0;
+}
+
+
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+  color:var(--text-color);
+  cursor: pointer;
+}
+.mosaic {
+  filter:blur(1px)
+}
+li:hover{
+  font-weight: 800;
+  cursor: pointer;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+  background-color: transparent;
+}
+
+#themeSwitchBtn {
+  position: relative;
+  margin-bottom: 17px;
+  width: 46px;
+  height: 13px;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  
+}
+
+#themeSwitchBtn::before {
+  content: "";
+  position: absolute;
+  border: none;
+  color: rgb(207, 236, 245);;
+  top: 2px;
+  left: 3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  transition: transform 0.4s ease;
+  transform: translateX(0);
+}
+
+#themeSwitchBtn.on::before {
+  transform: translateX(31px);
+
+}
+
+
+#Title{
+  padding: 0;
+  font-weight: 800;
+  font-size: 23px;
+}
+
+.Title-title{
+  padding: 0;
+  margin:0;
+}
+
+
+
+  .scroll-transition-fade {
+    opacity: 0; /* 初始时透明度为0，图片隐藏 */
+    animation: fadeIn 2s ease-in-out forwards; /* 使用fadeIn动画，持续2秒，缓动效果 */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 透明度从0开始 */
+    }
+    to {
+        opacity: 1; /* 最终透明度为1，显示完整图片 */
+    }
+}
+
+.li-2-container{
+  background-color: #F5F7FA;
+}
+
+
+
+.li-2-title {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 900px;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  
+}
+  .row {
+  display: flex;
+flex-wrap: wrap; 
+  justify-content: left;
+  width: 100%;
+}
+
+.title, .text {
+  flex: 1;
+ /* max-width: 300px;  Set maximum width for text */
+  font-size: 14px;
+  padding-bottom:1rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+#li-3{
+  background-color: #FEFCEB;
+}
+
+.li-2-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  margin-top: 2rem;
+  font-size: 12px;
+}
+
+.overview {
+  display: flex;
+  width:500px;
+}
+
+.solutions{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.title{
+  font-weight: 800;
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 7px;
+
+}
+
+.contents{
+  margin: 0;
+  padding-bottom: 33px;
+}
+
+.li-2-description {
+  font-size: 12px;
+}
+
+
+.divider::before{
+  content: "O";
+}
+.divider::after {
+  content: "";
+  margin:55px 0px 81px 0px;
+  display: flex;
+  width: 100%;
+  height: 0.1px;
+  background-color: #111; 
+  transform: rotate(7deg);
+}
+
+/* .about{
+  font-size: 23px;
+  font-weight: 800;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+
+} */
