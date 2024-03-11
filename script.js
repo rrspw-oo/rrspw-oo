@@ -79,13 +79,22 @@ function getRandomColor() {
   var colors = ["#ff6200", "#adff2f", "#cfecef"];
   return colors[Math.floor(Math.random() * colors.length)];
 }
+
+/* cv*/
+document.getElementById("cvbtn").addEventListener("click", function () {
+  // Replace 'path/to/your/file.pdf' with the actual path to your PDF file
+  var pdfUrl = "./component/CV.png";
+  // Open the PDF file in a new tab or window
+  window.open(pdfUrl, "_blank");
+});
+
 /* textEffect */
 const gsTitle = {
   init() {
     this._root = document.querySelector("#Title");
     this._titles = this._root.querySelectorAll(".Title-title");
     this._frame = this._frame.bind(this);
-    this.setTexts(["[R_R]", "rEn", "REN!", "roɔweiwu"]);
+    this.setTexts(["[R_R]", "rEn", "REN!", "roɔwu"]);
   },
   on() {
     if (!this._frameId) {
@@ -121,10 +130,13 @@ const gsTitle = {
     }
     this._textContent(txt.join(""));
     this._root.classList.add("Title-glitch");
-    setTimeout(() => {
-      this._textContent(this._text);
-      this._root.classList.remove("Title-glitch");
-    }, 50 + Math.random() * 200);
+    setTimeout(
+      () => {
+        this._textContent(this._text);
+        this._root.classList.remove("Title-glitch");
+      },
+      50 + Math.random() * 200,
+    );
     this._frameId = setTimeout(this._frame, 250 + Math.random() * 500);
   },
 };
