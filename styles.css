@@ -208,17 +208,6 @@ footer {
   animation: fadeIn 2s ease-in-out forwards;
 }
 
-.FCsystem {
-  max-width: 100%;
-  height: auto;
-}
-
-.rpa {
-  max-width: 100%;
-  height: 450px;
-  transition-duration: initial;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0; /* 透明度从0开始 */
@@ -226,10 +215,6 @@ footer {
   to {
     opacity: 1; /* 最终透明度为1，显示完整图片 */
   }
-}
-
-.li-2-container {
-  background-color: #f5f7fa;
 }
 
 .li-2-title {
@@ -315,6 +300,24 @@ footer {
 
 .rpa {
   width: 100%;
+  height: auto;
+  transition-duration: initial;
+}
+
+.ecoCommute {
+  width: 900px;
+  height: auto;
+  transition-duration: initial;
+}
+
+.faconSystem {
+  width: 900px;
+  height: auto;
+  transition-duration: initial;
+}
+
+.middleWarePic {
+  width: 900px;
   height: auto;
   transition-duration: initial;
 }
